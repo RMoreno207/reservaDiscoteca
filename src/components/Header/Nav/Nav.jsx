@@ -19,9 +19,16 @@ function Navbar() {
         <button className='navButton'>Buy</button>
         <div className={`links ${clicked ? 'active' : ''}`}>
           <a onClick={handleClick} href="#h">Eventos</a>
-          <a onClick={handleClick} href="#h">Contacto</a>
           <a onClick={handleClick} href="#h">Restaurante</a>
-          
+          <a onClick={handleClick} href="#h">Galería</a>
+          <a onClick={handleClick} href="#h">Tienda</a>
+          <a onClick={handleClick} href="#h">Contacta con nosotros</a>
+          <a onClick={handleClick} href="#h">Trabaja con nosotros</a>
+          <select name="" id="">
+            <option value="spanish">ES</option>
+            <option value="english">EN</option>
+            <option value="french">FR</option>
+          </select>
         </div>
       
         <BgDiv className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
@@ -54,7 +61,7 @@ const NavContainer = styled.nav`
     filter:brightness(200%);
   }
   padding: .4rem;
-  background-color: RGBA(32,16,79,0.75);
+  background-color: RGBA(22,0,89,0.86);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,7 +119,7 @@ const NavContainer = styled.nav`
 `
 
 const BgDiv = styled.div`
-  background-color: RGBA(32,16,79,0.75);
+  background-color: RGBA(7,0,36,0.92);
   position: absolute;
   top: -1000px;
   left: -1000px;
