@@ -1,10 +1,12 @@
 
 @import '../utils/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 .App {
     text-align: center;
     
-   background: #330E65;
+    font-family: 'Poppins',sans-serif;
+//    background: #330E65;
     min-height: 100vh;
 }
 
