@@ -1,28 +1,33 @@
-import React from "react";
+import React,{useState} from "react";
 import { Formik, Field, Form } from 'formik';
-import BackLogin from '../../../assets/img/backLogin.jpg'
+import BackLogin from '../../../assets/img/backLogin.jpg';
+import {useForm} from 'react-hook-form';
 
 const Singup = () => {
+  const {register,formState:{errors},handleSubmit} = useForm();
+  const [message,setMessage] = useState('');
 
-  function signIn(){
-
+  const onSubmit = (form)=>{
+     
+    setMessage('Inicio de sesión exitoso');
+    alert('Bienvenido: ' + form.username); 
   }
-  function closeModal(){
 
-  }
+  
 
 
   return (
     <div> 
       <dialog className="formDiv" open>
     <button className="closeBtn"><b>X</b></button>
-    <form onSubmit={signIn}>
+    <form onSubmit={handleSubmit(onSubmit)}>
     <label htmlFor="">Nombre de usuario</label>
-    <input type="text" />
+    <input type="text" {...register('username',{required:true})}/>{errors.username?.type==='required' && <p className="errorMsg">El campo Nombre de usuario es requerido</p>}
     <label htmlFor="">Contraseña</label>
-    <input type="text" />
+    <input type="text" {...register('password',{required:true})} />{errors.password?.type==='required' && <p className="errorMsg">El campo Contraseña es requerido</p>}
     <button type="submit" className="loginBtn">Login</button>
   </form>
+  <p className="submitMsg">{message}</p>
   </dialog>
   {/* <div>
     <img className="backgroundImage" src={BackLogin} alt="" />

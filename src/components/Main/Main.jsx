@@ -8,8 +8,8 @@ const Main = () => {
   return <div>
 
     <Routes>
-      <Route element={<Home />} path='/' />
-      <Route element={<Singup />} path='/singup' />
+      <Route element={<Singup />} path='/' />
+      <Route element={<Home />} path='/singup' />
       <Route element={<Booking />} exact path='/booking' />
       <Route element={<NotFound />} path={"/*"} />
     </Routes>
