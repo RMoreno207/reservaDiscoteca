@@ -40,34 +40,37 @@
 
 /* Formulario reserva */
 .Reserva {
-  width: 360px;
-  height: 800px;
-  flex-grow: 0;
+  width: 100%;
 
+  min-height: 100vh;
+  flex-grow: 0;
+  position: relative;
   background-color: #070024;
 }
 
 .Form_reserva {
-  width: 232px;
-  height: 357px;
+
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+
   gap: 58px;
-  margin: 64px 67px 80px 61px;
+  /* margin: 64px 67px 80px 61px; */
   padding: 0;
 }
 
+
 .input-sin-desplegar {
-  width: 232px;
+  width: 282px;
   height: 40px;
   flex-grow: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 106px;
+  /* gap: 106px; */
   padding: 8px;
   border-radius: 8px;
   border: solid 2px #c10230;
@@ -76,8 +79,8 @@
 }
 
 .input-sin-desplegar2 {
-  width: 212px;
-  height: 40px;
+  width: 262px;
+  height: 20px;
   flex-grow: 0;
   display: flex;
   flex-direction: row;
@@ -91,30 +94,9 @@
   color: white;
 }
 
-.Ttulo {
-  width: 59px;
-  height: 19px;
-  flex-grow: 0;
-  font-family: Lato;
-  font-size: 16px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #f9f8f8;
-}
-
 .Main-Button-Original {
-  width: 142px;
-  height: 35px;
-  flex-grow: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
+  width: 180px;
+  height: 40px;
   padding: 8px 16px;
   border-radius: 4px;
   background-color: #c10230;
