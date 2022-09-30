@@ -24,14 +24,16 @@ const Booking = () => {
         <form className="Form_reserva" onSubmit={showResults}>
           {/* <label className="Ttulo" htmlFor="firstName">Nombre</label> */}
           {/* Nombre */}
-          <input className="input-sin-desplegar2"
+          <input
+            required
+            className="input-sin-desplegar2"
             id="firstName"
             name="firstName"
             placeholder="Insertar Nombre"
           />
           {/* fecha */}
-          <select className="input-sin-desplegar" name="date" id="date">
-            <option value="date">Escoger fecha</option>
+          <select required className="input-sin-desplegar" name="date" id="date">
+            <option value="">Escoger fecha</option>
             <option value="Lunes">Lunes</option>
             <option value="Martes">Martes</option>
             <option value="Miercoles">Miercoles</option>
@@ -41,18 +43,18 @@ const Booking = () => {
             <option value="Domingo">Domingo</option>
           </select>
           {/* Hora */}
-          <select className="input-sin-desplegar" name="time" id="time">
-            <option value="time">Hora</option>
-            <option value="19h">19:00</option>
-            <option value="20h">20:00</option>
-            <option value="21h">21:00</option>
-            <option value="22h">22:00</option>
-            <option value="23h">23:00</option>
-            <option value="00h">00:00</option>
+          <select required className="input-sin-desplegar" name="time" id="time">
+            <option value="">Hora</option>
+            <option>19:00</option>
+            <option>20:00</option>
+            <option>21:00</option>
+            <option>22:00</option>
+            <option>23:00</option>
+            <option>00:00</option>
           </select>
           {/* Zona */}
-          <select className="input-sin-desplegar" name="zone" id="zone" placeholder="Zona">
-            <option value="zona">Zona</option>
+          <select required className="input-sin-desplegar" name="zone" id="zone" placeholder="Zona">
+            <option value="">Zona</option>
             <option value="VIP">VIP</option>
             <option value="Palco">Palco</option>
             <option value="Terraza">Terraza</option>
