@@ -1,19 +1,20 @@
 footer{
     background-color: #160059;
-    border-top: 1px solid #E7E7E7;
+    
     text-align: center;
     padding: 20px;
     position: fixed;
     left: 0;
     bottom: 0;
     height: 60px;
-    width: 100%;
+    width: 90%;
     box-shadow: 0px -38px 22px 18px rgba(0,0,0,0.71);
 }
 
 .inicioBtn, .reservasBtn, .perfilBtn{
     border: none;
     background: none;
+    
 }
 .inicioBtn:hover{
     padding: 4px 20px;

@@ -41,6 +41,9 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
+
+  
+
   .navButton{
     background-color: #c10230;
     border-color: #c10230;
@@ -56,9 +59,10 @@ const NavContainer = styled.nav`
     text-align:center;
     text-transform:uppercase;
     cursor:pointer;
+   
   }
   .navImage{
-    width:15%;
+    width:13%;
     filter:brightness(100%);
   }
   padding: .4rem;
