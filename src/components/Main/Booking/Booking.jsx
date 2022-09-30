@@ -24,7 +24,7 @@ const Booking = () => {
         <form className="Form_reserva" onSubmit={showResults}>
           {/* <label className="Ttulo" htmlFor="firstName">Nombre</label> */}
           {/* Nombre */}
-          <input className="input-sin-desplegar"
+          <input className="input-sin-desplegar2"
             id="firstName"
             name="firstName"
             placeholder="Insertar Nombre"
@@ -67,7 +67,9 @@ const Booking = () => {
             placeholder="usuario@gmail.com"
             type="email"
           />*/}
+
           <button className="Main-Button-Original" type="submit">Mandar reserva</button>
+
         </form>
       </div>
     </div>
