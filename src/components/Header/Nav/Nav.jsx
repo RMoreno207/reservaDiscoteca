@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import BurguerButton from '../BurguerButton/BurguerButton'
+import BurguerButton from '../BurguerButton/BurguerButton';
+import Logo from '../../../assets/img/logo.png'
 
 function Navbar() {
 
@@ -15,7 +16,7 @@ function Navbar() {
       <div className='burguer'>
           <BurguerButton clicked={clicked} handleClick={handleClick} />
         </div>
-        <img className="navImage" src="https://i0.wp.com/www.imamcomunicacion.com/wp-content/uploads/2020/04/09-logo-pacha-ibiza-gris.png?fit=300%2C300&ssl=1" alt="" />
+        <img className="navImage" src={Logo} alt="" />
         <button className='navButton'>Buy</button>
         <div className={`links ${clicked ? 'active' : ''}`}>
           <a onClick={handleClick} href="#h">Eventos</a>
@@ -40,6 +41,9 @@ function Navbar() {
 export default Navbar
 
 const NavContainer = styled.nav`
+
+  
+
   .navButton{
     background-color: #c10230;
     border-color: #c10230;
@@ -50,18 +54,19 @@ const NavContainer = styled.nav`
     font-size:14px;
     letter-spacing:1.8px;
     line-height:24px;
-    margin:0px 0px 0px 16px;
+    margin:0px 30px 0px 0px;
     padding:8px 24px;
     text-align:center;
     text-transform:uppercase;
     cursor:pointer;
+   
   }
   .navImage{
-    width:30%;
-    filter:brightness(200%);
+    width:13%;
+    filter:brightness(100%);
   }
   padding: .4rem;
-  background-color: RGBA(22,0,89,0.86);
+  background-image: linear-gradient(to bottom, #070024 55%, rgba(0, 0, 0, 0) 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;

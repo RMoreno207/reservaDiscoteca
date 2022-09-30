@@ -1,39 +1,36 @@
 import React from "react";
 import { Formik, Field, Form } from 'formik';
+import BackLogin from '../../../assets/img/backLogin.jpg'
 
 const Singup = () => {
+
+  function signIn(){
+
+  }
+  function closeModal(){
+
+  }
+
+
   return (
-    <div>
-      <h1>Singup</h1>
-      <Formik
-        initialValues={{
-          firstName: '',
-          lastName: '',
-          email: '',
-        }}
-        onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
-      >
-        <Form>
-          <label htmlFor="firstName">First Name</label>
-          <Field id="firstName" name="firstName" placeholder="Jane" />
-
-          <label htmlFor="lastName">Last Name</label>
-          <Field id="lastName" name="lastName" placeholder="Doe" />
-
-          <label htmlFor="email">Email</label>
-          <Field
-            id="email"
-            name="email"
-            placeholder="jane@acme.com"
-            type="email"
-          />
-          <button type="submit">Submit</button>
-        </Form>
-      </Formik>
-    </div>
+    <div> 
+      <dialog className="formDiv" open>
+    <button className="closeBtn"><b>X</b></button>
+    <form onSubmit={signIn}>
+    <label htmlFor="">Nombre de usuario</label>
+    <input type="text" />
+    <label htmlFor="">Contraseña</label>
+    <input type="text" />
+    <button type="submit" className="loginBtn">Login</button>
+  </form>
+  </dialog>
+  {/* <div>
+    <img className="backgroundImage" src={BackLogin} alt="" />
+  </div> */}
+  </div>
+     
+    
+    
   )
 };
 
