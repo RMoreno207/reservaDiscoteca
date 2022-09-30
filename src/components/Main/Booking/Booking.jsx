@@ -1,38 +1,52 @@
 import React from "react";
-import { Formik, Field, Form } from 'formik';
 
 const Booking = () => {
   return (
-    <div>
-      <h1>Reserva</h1>
-      <Formik
-        initialValues={{
-          firstName: '',
-          lastName: '',
-          email: '',
-        }}
-        onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
-      >
-        <Form>
-          <label htmlFor="firstName">First Name</label>
-          <Field id="firstName" name="firstName" placeholder="Jane" />
-
-          <label htmlFor="lastName">Last Name</label>
-          <Field id="lastName" name="lastName" placeholder="Doe" />
-
-          <label htmlFor="email">Email</label>
-          <Field
-            id="email"
-            name="email"
-            placeholder="jane@acme.com"
-            type="email"
+    <div className="Reserva">
+      <div >
+        <h1>Reserva</h1>
+        <form className="Form_reserva">
+          <label className="Ttulo" htmlFor="firstName">Nombre</label>
+          {/* Nombre */}
+          <input className="input-sin-desplegar"
+            id="firstName"
+            name="firstName"
+            placeholder="Insertar Nombre"
           />
-          <button type="submit">Submit</button>
-        </Form>
-      </Formik>
+          {/* fecha */}
+          <input className="input-sin-desplegar"
+            id="date"
+            type="date"
+            name="date"
+            placeholder="Escoger fecha"
+          />
+          {/* Hora */}
+          <input className="input-sin-desplegar"
+            id="time"
+            type="time"
+            name="time"
+            placeholder="Hora"
+          />
+          {/* Zona */}
+          <select className="input-sin-desplegar" name="zone" id="zone" placeholder="Zona">
+            <option value="zona">Zona</option>
+            <option value="vip">VIP</option>
+            <option value="palco">Palco</option>
+            <option value="terraza">Terraza</option>
+            <option value="ZonaA">Zona A</option>
+            <option value="ZonaB">Zona B</option>
+            <option value="ZonaC">Zona C</option>
+          </select>
+          {/* Email
+<input className="input-sin-desplegar"
+             id="email"
+            name="email"
+            placeholder="usuario@gmail.com"
+            type="email"
+          />*/}
+          <button className="Main-Button-Original" type="submit">Mandar reserva</button>
+        </form>
+      </div>
     </div>
   )
 };
